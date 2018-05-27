@@ -21,7 +21,7 @@ enable-ipc = true
 enable-ipc = true
 ```
 
-Install `polybar-reload`:
+Install `polybar-reload` via pip:
 
 `pip install --user polybar-reload`
 
@@ -35,7 +35,7 @@ you use to start polybar.
 `~/.config/i3/config`
 
 ```
-exec --no-startup-id polybar-reload
+exec_always --no-startup-id ~/.local/bin/polybar-reload
 ```
 
 This will load polybar on startup, but not on "reload i3" (commonly bound to Mod+Shift+r)
@@ -43,3 +43,8 @@ This will load polybar on startup, but not on "reload i3" (commonly bound to Mod
 ## Upgrading
 
 `pip install --upgrade --user polybar-reload`
+
+If `polybar-reload` doesn't update to the newest version you can uninstall and reinstall.
+Make sure to bypass local cache.
+
+`pip uninstall polybar-reload && pip install --user --no-cache-dir polybar-reload`
