@@ -7,12 +7,11 @@ import select
 from Xlib.display import Display
 from subprocess import call
 
+display = Display(os.environ.get("DISPLAY",":0.0"))
+root = display.screen().root
+
 def get_screen_size():
-    display = Display(os.environ.get("DISPLAY",":0.0"))
-    root = display.screen().root
-    w = root.get_geometry().width
-    h = root.get_geometry().height
-    return (w,h)
+    return (root.get_geometry().width, root.get_geometry().height)
 k = get_screen_size()
 
 while True:
