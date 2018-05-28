@@ -32,7 +32,7 @@ you use to start polybar.
 
 ### for i3 users:
 
-`~/.config/i3/config`
+Add the following to your `~/.config/i3/config`
 
 ```
 exec_always --no-startup-id ~/.local/bin/polybar-reload
